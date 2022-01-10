@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const userInterestSchema = new Schema({
-    user_id: {
+const pinInterestSchema = new Schema({
+    pin_id: {
         type: String,
         required: true,
     },
     interest_id: {
-        type: String,
+        type: objectid,
         required: true
-}
+    }
 });
 
-module.exports = mongoose.model('UserInterest', userInterestSchema);
+module.exports = mongoose.model('PinInterest', pinInterestSchema);

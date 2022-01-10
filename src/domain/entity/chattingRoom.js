@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const userInterestSchema = new Schema({
-    user_id: {
-        type: String,
+const chattingRoomSchema = new Schema({
+    chattingRoom_id: {
+        type: objectid,
         required: true,
     },
     interest_id: {
         type: String,
         required: true
-}
+    }
 });
 
-module.exports = mongoose.model('UserInterest', userInterestSchema);
+module.exports = mongoose.model('chattingRoom', chattingRoomSchema);
