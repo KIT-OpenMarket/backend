@@ -9,7 +9,7 @@ const userInterestSchema = new Schema({
     interest_id: {
         type: String,
         required: true
-}
+    }
 });
 
 module.exports = mongoose.model('UserInterest', userInterestSchema);
