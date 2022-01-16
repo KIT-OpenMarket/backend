@@ -32,7 +32,7 @@ const userSchema = new Schema( {
         type : Date,
         default : Date.now,
     },
-    Status {
+    status {
         type : Number,
         default : 0,
     },

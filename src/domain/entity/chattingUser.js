@@ -4,12 +4,13 @@ const { Schema } = mongoose;
 const chattingUserSchema = new Schema({
     user_id: {
         type: String,
-        required: true
+        required: true,
+        ref : 'User',
     },
     chattingRoom_id: {
         type: objectid,
-        required: true
+        required: true,
     }
 });
 
-module.exports = mongoose.model('chattingUser', chattingUserSchema);
+module.exports = mongoose.model('ChattingUser', chattingUserSchema);

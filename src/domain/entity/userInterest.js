@@ -8,7 +8,8 @@ const userInterestSchema = new Schema({
     },
     interest_id: {
         type: String,
-        required: true
+        required: true,
+        ref : 'Interest'
     }
 });
 

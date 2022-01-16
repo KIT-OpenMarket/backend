@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+const { Types :  { ObjectId } } = Schema;
 const pinGroupSchema = new Schema({
-    pinGroup_id: {
-        type: objectid,
-        required: true,
-    },
+
     pin_id: {
-        type: objectid,
-        required: true
+        type: ObjectId,
+        required: true,
+        ref : ' Pin',
     },
     user_id: {
         type: String,
@@ -16,4 +15,4 @@ const pinGroupSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('pinGroup', pingroupSchema);
+module.exports = mongoose.model('PinGroup', pingroupSchema);

@@ -4,7 +4,8 @@ const { Schema } = mongoose;
 const interestSchema = new Schema({
     interest_id: {
         type: String,
-        required: true
+        required: true,
+        unique : true,
     },
     count: {
         type: number,
@@ -12,4 +13,4 @@ const interestSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('chattingUser', chattingUserSchema);
+module.exports = mongoose.model('Interest', chattingUserSchema);

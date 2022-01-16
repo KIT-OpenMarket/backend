@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+const { Types :  { ObjectId } } = Schema;
 const evaluationSchema = new Schema({
-    evaluation_id: {
-        type: objectid,
-        required: true
-    },
+
     discription: {
         type: String,
         required: true
@@ -20,4 +18,4 @@ const evaluationSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('evaluation', evaluationSchema);
+module.exports = mongoose.model('Evaluation', evaluationSchema);
