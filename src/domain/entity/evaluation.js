@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const evaluationSchema = new Schema({
     evaluation_id: {
-        type: objectid,
+        type: Objectid,
         required: true
     },
     discription: {

@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const pinGroupSchema = new Schema({
     pinGroup_id: {
-        type: objectid,
+        type: Objectid,
         required: true,
     },
     pin_id: {
-        type: objectid,
+        type: Objectid,
         required: true
     },
     user_id: {

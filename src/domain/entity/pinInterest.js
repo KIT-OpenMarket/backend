@@ -7,7 +7,7 @@ const pinInterestSchema = new Schema({
         required: true,
     },
     interest_id: {
-        type: objectid,
+        type: Objectid,
         required: true
     }
 });
