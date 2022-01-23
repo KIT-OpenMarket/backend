@@ -10,6 +10,7 @@ app.get('/', (req, res) => {
 app.set('port', process.env.PORT);
 
 
+
 dbConnect();
 
 app.listen(process.env.PORT, () => console.log(process.env.PORT,'포트에서 대기중'));
