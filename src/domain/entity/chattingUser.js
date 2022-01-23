@@ -7,7 +7,7 @@ const chattingUserSchema = new Schema({
         required: true
     },
     chattingRoom_id: {
-        type: Objectid,
+        type: objectid,
         required: true
     }
 });

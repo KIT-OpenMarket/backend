@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const chattingRoomSchema = new Schema({
     chattingRoom_id: {
-        type: Objectid,
+        type: objectid,
         required: true,
     },
-    host_id: {
+    interest_id: {
         type: String,
         required: true
     }
