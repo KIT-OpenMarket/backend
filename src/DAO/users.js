@@ -1,10 +1,9 @@
-var mongoose = require('mongoose').MongoClient;
-var schema = require('C:/Users/나영준/Documents/javascript/backend/src/domain/entity');
-var UserSchema = require(C:/Users/나영준/Documents/javascript/backend/src/domain/entity/user);
+const mongoose = require('mongoose').MongoClient;
+const UserSchema = require(C:/Users/나영준/Documents/javascript/backend/src/domain/entity/user);
 
 
-module.exports.UserRegister = function(User) {
-    UserSchema.create(req.body, function (err).exec();
+module.exports.UserRegister = function(user) {
+    UserSchema.create(user, function (err).exec();
 })
 .then((result) => {
     console.log(result);
@@ -12,8 +11,8 @@ module.exports.UserRegister = function(User) {
     console.error(err);
 });
 
-module.exports.UserModify = function (User) {
-    UserSchema.update(req.body, function (err).exec();
+module.exports.UserModify = function (user) {
+    UserSchema.update(user, function (err).exec();
 })
 .then((result) => {
     console.log(result);
@@ -21,8 +20,8 @@ module.exports.UserModify = function (User) {
     console.error(err);
 });
 
-module.exports.UserRemove = function (UserSchema.id){
-    UserSchema.remove(req.body, function(err).exec();
+module.exports.UserRemove = function (user){
+    UserSchema.remove(user, function(err).exec();
 })
 .then((result) => {
     console.log(result);
@@ -30,8 +29,8 @@ module.exports.UserRemove = function (UserSchema.id){
     console.error(err);
 });
 
-module.exports.UserFindOne = function (UserSchema.id){
-    return  UserSchema.findOne(req.body, function(err).exec();
+module.exports.UserFind = function (user){
+    return  UserSchema.findOne(user, function(err).exec();
 })
 .then((result) => {
     console.log(result);
@@ -39,7 +38,7 @@ module.exports.UserFindOne = function (UserSchema.id){
     console.error(err);
 });
 
-module.
+
 
 
 

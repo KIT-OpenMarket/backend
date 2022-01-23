@@ -1,0 +1,43 @@
+const mongoose = require('mongoose').MongoClient;
+const PinSchema = require(C:/Users/나영준/Documents/javascript/backend/src/domain/entity/pin);
+
+
+module.exports.PinRegister = function(pin) {
+    PinSchema.create(pin, function (err).exec();
+})
+.then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.error(err);
+});
+
+module.exports.PinModify = function (pin) {
+    PinSchema.update(pin, function (err).exec();
+})
+.then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.error(err);
+});
+
+module.exports.PinRemove = function (pin){
+    PinSchema.remove(pin, function(err).exec();
+})
+.then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.error(err);
+});
+
+module.exports.PinFind = function (pin){
+    return PinSchema.findAll(pin, function(err).exec();
+})
+.then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.error(err);
+});
+
+
+
+
