@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const user = require('../../src/domain/user');
+const {userRegister} = require('../../domain/DAO/users');
 
 // 유저 등록
 router.post('/user', (req, res) => {
@@ -10,7 +10,7 @@ router.post('/user', (req, res) => {
     let age = data.age;
     let gender = data.gender;
     let interest = data.interest;
+    userRegister()
 
-    user.
 
 });
