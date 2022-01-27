@@ -2,10 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const dbConnect = require('./config/Mongodb/dbInit');
 const app = express();
-var step1 = require('./router/User/join');
-var step2 = require('./routes/User/login');
 
-app.use('/Users', step1, step2);
 
 app.get('/', (req, res) => {
     res.send('hello node');
