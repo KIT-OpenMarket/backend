@@ -18,7 +18,7 @@ router.get('/', function(req, res) {
     }
 });
 
-router.post('/', function(req, res) {
+router.delete('/', function(req, res) {
     UserRemove(req.body);
     console.log(req.body);
     res.send(200);
@@ -41,7 +41,7 @@ router.get('/', function(req, res) {
     }
 });
 
-router.post('/', function(req, res) {
+router.delete('/', function(req, res) {
     PinRemove(req.body);
     console.log('success');
     res.send(200);
@@ -64,7 +64,7 @@ router.get('/', function(req, res) {
     }
 });
 
-router.post('/', function(req, res) {
+router.delete('/', function(req, res) {
     EvaluationRemove(req.body);
     console.log('success');
     res.send(200);
@@ -76,27 +76,6 @@ router.post('/', function(req, res) {
     res.send(200);
 });
 
-router.get('/', function(req, res) {
-    if(InterestFind()!== null){
-        console.log('success');
-        res.send(EvaluationFind());
-    }
-    else {
-        console.log('error');
-        res.send('error');
-    }
-});
 
-router.post('/', function(req, res) {
-    InterestRemove(req.body);
-    console.log('success');
-    res.send(200);
-});
-
-router.post('/', function(req, res) {
-    InterestModify(req.body);
-    console.log('success');
-    res.send(200);
-});
 
 module.exports = router;
