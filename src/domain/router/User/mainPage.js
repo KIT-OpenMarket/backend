@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
    if(PinFind)
 });
 
-router.get('/', function(req, res) {
+router.post('/', function(req, res) {
     user.UserRemove(req.body);
     console.log(req.body);
     res.send(200);
