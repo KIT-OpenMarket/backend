@@ -3,8 +3,8 @@ const InterestSchema = require('../entity/interest');
 
 
 module.exports.InterestRegister = function(interest) {
-    InterestSchema.create(interest, function (err).exec();
-})
+    InterestSchema.create(interest, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -12,8 +12,8 @@ module.exports.InterestRegister = function(interest) {
 });
 
 module.exports.InterestModify = function (interest) {
-    InterestSchema.update(interest, function (err).exec();
-})
+    InterestSchema.update(interest, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -21,8 +21,8 @@ module.exports.InterestModify = function (interest) {
 });
 
 module.exports.InterestRemove = function (interest){
-    InterestSchema.remove(interest, function(err).exec();
-})
+    InterestSchema.remove(interest, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -30,8 +30,8 @@ module.exports.InterestRemove = function (interest){
 });
 
 module.exports.InterestFind = function (interest){
-    return InterestSchema.findAll(interest, function(err).exec();
-})
+    return InterestSchema.findAll(interest, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {

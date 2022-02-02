@@ -1,5 +1,5 @@
-cosnt  mongoose = require('mongoose');
-
+const mongoose = require('mongoose');
+const { Types :  { ObjectId } } = Schema;
 const { Schema } = mongoose;
 const userSchema = new Schema( {
     user_id: {
@@ -32,7 +32,7 @@ const userSchema = new Schema( {
         type : Date,
         default : Date.now,
     },
-    status {
+    status : {
         type : Number,
         default : 0,
     },

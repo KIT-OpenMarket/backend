@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const {Schema } = mongoose;
-
+const { Types :  { ObjectId } } = Schema;
 const pinSchema = new Schema ( {
     latitude : {
         type : Number,
@@ -27,7 +27,7 @@ const pinSchema = new Schema ( {
     deadline : {
         type : Date,
         required : true,
-    }
+    },
     max_user : {
         type : Number,
         required : true,

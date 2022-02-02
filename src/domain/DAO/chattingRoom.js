@@ -3,8 +3,8 @@ const ChattingRoomSchema = require('../entity/chattingRoom');
 
 
 module.exports.ChattingRoomRegister = function(chattingRoom) {
-    ChattingRoomSchema.create(chattingRoom, function (err).exec();
-})
+    ChattingRoomSchema.create(chattingRoom, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -12,8 +12,8 @@ module.exports.ChattingRoomRegister = function(chattingRoom) {
 });
 
 module.exports.ChattingRoomModify = function (chattingRoom) {
-    ChattingRoomSchema.update(chattingRoom, function (err).exec();
-})
+    ChattingRoomSchema.update(chattingRoom, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -21,8 +21,8 @@ module.exports.ChattingRoomModify = function (chattingRoom) {
 });
 
 module.exports.ChattingRoomRemove = function (chattingRoom){
-    ChattingRoomSchema.remove(chattingRoom, function(err).exec();
-})
+    ChattingRoomSchema.remove(chattingRoom, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -30,8 +30,8 @@ module.exports.ChattingRoomRemove = function (chattingRoom){
 });
 
 module.exports.ChattingRoomFind = function (chattingRoom){
-    return ChattingRoomSchema.findOne(chattingRoom, function(err).exec();
-})
+    return ChattingRoomSchema.findOne(chattingRoom, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {

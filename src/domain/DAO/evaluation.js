@@ -3,8 +3,8 @@ const EvaluationSchema = require('../entity/evaluation');
 
 
 module.exports.EvaluationRegister = function(evaluation) {
-    EvaluationSchema.create(evaluation, function (err).exec();
-})
+    EvaluationSchema.create(evaluation, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -12,8 +12,8 @@ module.exports.EvaluationRegister = function(evaluation) {
 });
 
 module.exports.EvaluationModify = function (evaluation) {
-    EvaluationSchema.update(evaluation, function (err).exec();
-})
+    EvaluationSchema.update(evaluation, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -21,8 +21,8 @@ module.exports.EvaluationModify = function (evaluation) {
 });
 
 module.exports.EvaluationRemove = function (evaluation){
-    EvaluationSchema.remove(evaluation, function(err).exec();
-})
+    EvaluationSchema.remove(evaluation, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -30,8 +30,8 @@ module.exports.EvaluationRemove = function (evaluation){
 });
 
 module.exports.EvaluationFind = function (evaluation){
-    return EvaluationSchema.findOne(evaluation, function(err).exec();
-})
+    return EvaluationSchema.findOne(evaluation, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {

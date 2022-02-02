@@ -1,10 +1,11 @@
 const mongoose = require('mongoose').MongoClient;
 const UserSchema = require('../entity/user');
+const PinSchema = require("../entity/pin");
 
 
 module.exports.UserRegister = function(user) {
-    UserSchema.create(user, function (err).exec();
-})
+    UserSchema.create(user, function (err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -12,8 +13,9 @@ module.exports.UserRegister = function(user) {
 });
 
 module.exports.UserModify = function (user) {
-    UserSchema.update(user, function (err).exec();
-})
+    UserSchema.update(user, function (err){}.exec()),
+    PinSchema.update({ user.id }, {modified_date : Date.now })
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -21,8 +23,8 @@ module.exports.UserModify = function (user) {
 });
 
 module.exports.UserRemove = function (user){
-    UserSchema.remove(user, function(err).exec();
-})
+    UserSchema.remove(user, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
@@ -30,8 +32,8 @@ module.exports.UserRemove = function (user){
 });
 
 module.exports.UserFind = function (user){
-    return  UserSchema.findOne(user, function(err).exec();
-})
+    return  UserSchema.findOne(user, function(err){}.exec())
+}
 .then((result) => {
     console.log(result);
 }).catch((err) => {
