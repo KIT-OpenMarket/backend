@@ -13,7 +13,7 @@ module.exports.PinRegister = function(pin) {
 
 module.exports.PinModify = function (pin) {
     PinSchema.update(pin, function (err){}.exec()),
-        PinSchema.update({ pin.id }, {modified_date : Date.now })
+        PinSchema.update({ pin : pin.id }, {modified_date : Date.now })
 }
 .then((result) => {
     console.log(result);
@@ -31,7 +31,7 @@ module.exports.PinRemove = function (pin){
 });
 
 module.exports.PinFind = function (pin){
-    return PinSchema.findAll(pin, function(err){}.exec())
+    return PinSchema.find(pin, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);

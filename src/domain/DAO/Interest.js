@@ -30,7 +30,7 @@ module.exports.InterestRemove = function (interest){
 });
 
 module.exports.InterestFind = function (interest){
-    return InterestSchema.findAll(interest, function(err){}.exec())
+    return InterestSchema.find(interest, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);

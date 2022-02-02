@@ -14,7 +14,7 @@ module.exports.UserRegister = function(user) {
 
 module.exports.UserModify = function (user) {
     UserSchema.update(user, function (err){}.exec()),
-    PinSchema.update({ user.id }, {modified_date : Date.now })
+    PinSchema.update({ _id : user._id }, {modified_date : Date.now })
 }
 .then((result) => {
     console.log(result);
@@ -32,7 +32,7 @@ module.exports.UserRemove = function (user){
 });
 
 module.exports.UserFind = function (user){
-    return  UserSchema.findOne(user, function(err){}.exec())
+    return  UserSchema.findById(user._id, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);

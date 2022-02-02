@@ -31,7 +31,7 @@ module.exports.PinGroupModify = function (pinGroup) {
         });
 
     module.exports.PinGroupFind = function (pinGroup) {
-        return PinGroupSchema.findOne(pinGroup, function (err) {
+        return PinGroupSchema.findOne(pinGroup._id, function (err) {
         }.exec())
     }
         .then((result) => {

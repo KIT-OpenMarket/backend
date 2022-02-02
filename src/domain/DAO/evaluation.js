@@ -30,7 +30,7 @@ module.exports.EvaluationRemove = function (evaluation){
 });
 
 module.exports.EvaluationFind = function (evaluation){
-    return EvaluationSchema.findOne(evaluation, function(err){}.exec())
+    return EvaluationSchema.findById(evaluation._id, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);

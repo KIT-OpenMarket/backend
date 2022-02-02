@@ -30,7 +30,7 @@ module.exports.ChattingUserRemove = function (chattingUser){
 });
 
 module.exports.ChattingUserFind = function (chattingUser){
-    return EvaluationSchema.findOne(chattingUser, function(err){}.exec())
+    return EvaluationSchema.findById(chattingUser._id, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);

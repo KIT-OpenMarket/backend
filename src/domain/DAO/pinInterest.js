@@ -30,7 +30,7 @@ module.exports.PinInterestRemove = function (pinInterest){
 });
 
 module.exports.PinInterestFind = function (pinInterest){
-    return PinInterestSchema.findAll(pinInterest, function(err){}.exec())
+    return PinInterestSchema.find(pinInterest, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);
