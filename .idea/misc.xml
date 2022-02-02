@@ -3,4 +3,30 @@
   <component name="ProjectRootManager">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
+  <component name="UnattendedHostPersistenceState">
+    <option name="openedFilesInfos">
+      <list>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="142" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/router/User/login.js" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="157" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/router/User/join.js" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="0" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/.env" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="498" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/server.js" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="244" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/router/User/mypage.js" />
+        </OpenedFileInfo>
+      </list>
+    </option>
+  </component>
 </project>
