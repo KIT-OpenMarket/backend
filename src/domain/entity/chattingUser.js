@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
+const { Types :  { ObjectId } } = Schema;
 const chattingUserSchema = new Schema({
     user_id: {
         type: String,
@@ -8,7 +8,7 @@ const chattingUserSchema = new Schema({
         ref : 'User',
     },
     chattingRoom_id: {
-        type: objectid,
+        type: ObjectId,
         required: true,
     }
 });

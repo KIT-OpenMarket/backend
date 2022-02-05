@@ -13,15 +13,15 @@ const pinSchema = new Schema ( {
     },
     title : {
         type : String,
-        requried : true,
+        required : true,
     },
     description : {
         type : String,
-        requried: true,
+        required: true,
     },
     host_id : {
         type : String,
-        requried : true,
+        required : true,
         ref : 'User',
     },
     deadline : {
@@ -34,12 +34,13 @@ const pinSchema = new Schema ( {
         default : 999,
     },
     now_user : {
-        type : number,
+        type : Number,
         required : true,
         default: 1,
     },
-    modified_date : {
+    modified_date :{
         type : Date,
+        default : Date.now,
     },
     create_date : {
         type : Date,

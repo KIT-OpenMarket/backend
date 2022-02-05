@@ -1,4 +1,4 @@
-const mongoose = require('mongoose').MongoClient;
+const mongoose = require('mongoose');
 const InterestSchema = require('../entity/interest');
 
 

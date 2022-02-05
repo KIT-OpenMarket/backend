@@ -8,9 +8,9 @@ const interestSchema = new Schema({
         unique : true,
     },
     count: {
-        type: number,
+        type: Number,
         required: true
     }
 });
 
-module.exports = mongoose.model('Interest', chattingUserSchema);
+module.exports = mongoose.model('Interest', interestSchema);

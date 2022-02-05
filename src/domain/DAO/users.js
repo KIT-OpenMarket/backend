@@ -1,44 +1,49 @@
-const mongoose = require('mongoose').MongoClient;
+const mongoose = require('mongoose');
 const UserSchema = require('../entity/user');
-const PinSchema = require("../entity/pin");
+
 
 
 module.exports.UserRegister = function(user) {
-    UserSchema.create(user, function (err){}.exec())
-}
-.then((result) => {
-    console.log(result);
-}).catch((err) => {
-    console.error(err);
-});
+    UserSchema.create(user, (err) => {
+        if (err) {
+            console.log(err);
+            return 0;
+        }
+        console.log('user Data Insert Complete');
+        console.log(user);
+        return 1;
+    })
+};
 
 module.exports.UserModify = function (user) {
-    UserSchema.update(user, function (err){}.exec()),
-    PinSchema.update({ _id : user._id }, {modified_date : Date.now })
-}
-.then((result) => {
-    console.log(result);
-}).catch((err) => {
-    console.error(err);
-});
+    let query = { user_id : user.user_id };
+    UserSchema.updateOne(query, user, (err) => {
+        if(err) {
+            console.log(err);
+            return 0;
+        }
+        console.log('user Data update Complete');
+        console.log(UserSchema.findById(user.user_id));
+    })
+};
 
-module.exports.UserRemove = function (user){
-    UserSchema.remove(user, function(err){}.exec())
-}
-.then((result) => {
-    console.log(result);
-}).catch((err) => {
-    console.error(err);
-});
-
-module.exports.UserFind = function (user){
-    return  UserSchema.findById(user._id, function(err){}.exec())
-}
-.then((result) => {
-    console.log(result);
-}).catch((err) => {
-    console.error(err);
-});
+// module.exports.UserRemove = function (user){
+//     UserSchema.remove(user, function(err){}.exec())
+// }
+// .then((result) => {
+//     console.log(result);
+// }).catch((err) => {
+//     console.error(err);
+// });
+//
+// module.exports.UserFind = function (user){
+//     return  UserSchema.findById(user._id, function(err){}.exec())
+// }
+// .then((result) => {
+//     console.log(result);
+// }).catch((err) => {
+//     console.error(err);
+// });
 
 
 
