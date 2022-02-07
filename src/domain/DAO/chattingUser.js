@@ -1,9 +1,9 @@
-const mongoose = require('mongoose').MongoClient;
+const mongoose = require('mongoose');
 const ChattingUserSchema = require('../entity/chattingUser');
 
 
 module.exports.ChattingUserRegister = function(chattingUser) {
-    EvaluationSchema.create(chattingUser, function (err){}.exec())
+    ChattingUserSchema.create(chattingUser, function (err){}.exec())
 }
 .then((result) => {
     console.log(result);
@@ -12,7 +12,7 @@ module.exports.ChattingUserRegister = function(chattingUser) {
 });
 
 module.exports.ChattingUserModify = function (chattingUser) {
-    EvaluationSchema.update(chattingUser, function (err){}.exec())
+    ChattingUserSchema.update(chattingUser, function (err){}.exec())
 }
 .then((result) => {
     console.log(result);
@@ -21,7 +21,7 @@ module.exports.ChattingUserModify = function (chattingUser) {
 });
 
 module.exports.ChattingUserRemove = function (chattingUser){
-    EvaluationSchema.remove(chattingUser, function(err){}.exec())
+    ChattingUserSchema.remove(chattingUser, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);
@@ -30,7 +30,7 @@ module.exports.ChattingUserRemove = function (chattingUser){
 });
 
 module.exports.ChattingUserFind = function (chattingUser){
-    return EvaluationSchema.findById(chattingUser._id, function(err){}.exec())
+    return ChattingUserSchema.findById(chattingUser._id, function(err){}.exec())
 }
 .then((result) => {
     console.log(result);
