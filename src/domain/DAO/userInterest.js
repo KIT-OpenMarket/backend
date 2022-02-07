@@ -30,7 +30,7 @@ module.exports.UserInterestRemove = function (userInterest){
 });
 
 module.exports.UserInterestFind = function (userInterest){
-    return UserInterestSchema.find(userInterest, function(err){}.exec())
+    return UserInterestSchema.find(userInterest, function(err){}.exec() )
 }
 .then((result) => {
     console.log(result);

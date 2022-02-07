@@ -13,7 +13,7 @@ module.exports.PinRegister = function(pin) {
 
 module.exports.PinModify = function (pin) {
     PinSchema.update(pin, function (err){}.exec()),
-        PinSchema.update({ pin.id }, {modified_date : Date.now })
+        PinSchema.update({ _id :pin._id }, {modified_date : Date.now })
 }
 .then((result) => {
     console.log(result);

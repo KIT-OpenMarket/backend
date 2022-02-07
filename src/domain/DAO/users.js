@@ -31,14 +31,23 @@ module.exports.UserRemove = function (user){
     console.error(err);
 });
 
-module.exports.UserFind = function (user){
-    return  UserSchema.findById(user._id, function(err){}.exec())
+module.exports.UserFindLogin = function (user){
+    return  0;
 }
 .then((result) => {
     console.log(result);
 }).catch((err) => {
     console.error(err);
 });
+
+module.exports.UserFindMyPage = function (user){
+    return  UserSchema.findById(user._id, function(err){}.exec())
+}
+    .then((result) => {
+        console.log(result);
+    }).catch((err) => {
+        console.error(err);
+    });
 
 
 
