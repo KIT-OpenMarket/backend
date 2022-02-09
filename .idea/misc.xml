@@ -7,10 +7,6 @@
     <option name="openedFilesInfos">
       <list>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
-          <option name="fileUrl" value="file://$PROJECT_DIR$/src/domain/DAO/pin.js" />
-        </OpenedFileInfo>
-        <OpenedFileInfo>
           <option name="caretOffset" value="213" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/README.md" />
         </OpenedFileInfo>
@@ -43,8 +39,12 @@
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/domain/entity/user.js" />
         </OpenedFileInfo>
         <OpenedFileInfo>
-          <option name="caretOffset" value="0" />
+          <option name="caretOffset" value="348" />
           <option name="fileUrl" value="file://$PROJECT_DIR$/src/domain/entity/chattingUser.js" />
+        </OpenedFileInfo>
+        <OpenedFileInfo>
+          <option name="caretOffset" value="6" />
+          <option name="fileUrl" value="file://$PROJECT_DIR$/src/domain/DAO/users.js" />
         </OpenedFileInfo>
       </list>
     </option>
