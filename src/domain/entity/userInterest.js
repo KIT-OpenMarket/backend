@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
+const { Types :  { ObjectId } } = Schema;
 const userInterestSchema = new Schema({
     user_id: {
         type: String,

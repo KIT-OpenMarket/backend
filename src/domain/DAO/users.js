@@ -27,24 +27,25 @@ module.exports.UserModify = function (user) {
     })
 };
 
-// module.exports.UserRemove = function (user){
-//     UserSchema.remove(user, function(err){}.exec())
-// }
-// .then((result) => {
-//     console.log(result);
-// }).catch((err) => {
-//     console.error(err);
-// });
-//
-// module.exports.UserFind = function (user){
-//     return  UserSchema.findById(user._id, function(err){}.exec())
-// }
-// .then((result) => {
-//     console.log(result);
-// }).catch((err) => {
-//     console.error(err);
-// });
+module.exports.UserRemove = function (user){
+    UserSchema.remove({user_id : user.user_id}, (err) => {
+       if(err){
+           console.log(err);
+           return 0;
+       }
+       console.log('user Data delete complete');
+       console.log('delete ID : ', user.user_id);
+    });
+}
 
+module.exports.UserFind = function (user){
+    return  UserSchema.findById(user.user_id, (err) =>{
+        if(err) {
+            console.log(err)
+            return 0;
+        }
+    });
+};
 
 
 
