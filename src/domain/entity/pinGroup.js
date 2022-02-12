@@ -7,7 +7,7 @@ const pinGroupSchema = new Schema({
     pin_id: {
         type: ObjectId,
         required: true,
-        ref : ' Pin',
+        ref : ' pin',
     },
     user_id: {
         type: String,

@@ -46,6 +46,10 @@ const pinSchema = new Schema ( {
         type : Date,
         default : Date.now,
     },
+    interest : [
+        { type : String}
+    ]
+
 });
 
 module.exports = mongoose.model('Pin',pinSchema);

@@ -15,6 +15,10 @@ const evaluationSchema = new Schema({
     target_id: {
         type: String,
         required: true
+    },
+    rate: {
+        type: Number,
+        required: true
     }
 });
 

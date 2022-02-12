@@ -28,7 +28,7 @@ let userData = {
     phone_num : "01012345678"
 };
 
-userDAO.UserModify(userData);
+console.log(userDAO.UserFind(userData));
 
 app.use((req,res,next)=> {
     console.log(req.body);

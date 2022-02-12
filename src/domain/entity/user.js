@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const userSchema = new Schema( {
-    user_id: {
+    id: {
         type : String,
         required: true,
         unique : true,
@@ -34,10 +34,11 @@ const userSchema = new Schema( {
         type : Date,
         default : Date.now,
     },
-    status : {
+    interest : [String],
+    status : {  // 0 은 아무상태 아님, 1은 블랙리스트, 2는 비밀번호 갱신 상태 3은 회원탈퇴
         type : Number,
         default : 0,
     },
 });
-
+userSchema.index({user_id : 1});
 module.exports = mongoose.model('User', userSchema);

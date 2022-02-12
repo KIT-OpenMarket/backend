@@ -2,44 +2,65 @@ const mongoose = require('mongoose');
 const PinGroupSchema = require('./../entity/pinGroup');
 
 
-module.exports.PinGroupRegister = function(pinGroup) {
-    PinGroupSchema.create(pinGroup, function (err){}.exec())
+function PinGroupFindByPinId (PinObjectId) {
+    PinGroupSchema.find({id : PinObjectId}, (err, PinGroup_dt) => {
+        if(PinGroup_dt.length == 0){
+            return undefined;
+        }
+        return PinGroup_dt;
+    })
 }
-.then((result) => {
-    console.log(result);
-}).catch((err) => {
-    console.error(err);
-});
 
-module.exports.PinGroupModify = function (pinGroup) {
-    PinGroupSchema.remove(pinGroup, function (err) {
-    }.exec())
-        .then((result) => {
-            console.log(result);
-        }).catch((err) => {
+function PinGroupFindByUserId (userId) {
+    PinGroupSchema.find({user_id : userId}, (err, PinGroup_dt) => {
+        if(PinGroup_dt.length == 0){
+            return undefined;
+        }
+        return PinGroup_dt;
+    })
+}
+
+function PinGroupAddUser (PinGroup) {
+    try {
+        PinGroupSchema.create(PinGroup);
+        console.log("success create Pingroup");
+        console.log(PinGroup);
+        return 1;
+    }catch (err){
         console.error(err);
-    });
+        console.log("Pingroup is exist");
+        return 0;
+    }
 }
-    module.exports.PinGroupRemove = function (pinGroup) {
-        PinGroupSchema.remove(pinGroup, function (err) {
-        }.exec())
+
+function PinGroupDeleteByPinId (PinObjectId) {
+    try {
+        PinGroupSchema.deleteMany({pin_id : PinObjectId});
+        console.log("success delete PinGroup");
+        console.log(PinObjectId);
+        return 1;
+    }catch (err){
+        console.log("Error PingObjectID can't delete");
+        console.error(err);
+        return 0;
     }
-        .then((result) => {
-            console.log(result);
-        }).catch((err) => {
-            console.error(err);
-        });
+}
 
-    module.exports.PinGroupFind = function (pinGroup) {
-        return PinGroupSchema.findById(pinGroup._id, function (err) {
-        }.exec())
+function PinGroupDeleteByUserId (user_id) {
+    try{
+        PinGroupSchema.deleteOne({user_id : user_id});
+        console.log("success delete Pingroup in user");
+        console.log(user_id);
+        return 1;
+    }catch (err){
+        console.log("Error userId can't delete");
+        console.error(err);
+        return 0;
     }
-        .then((result) => {
-            console.log(result);
-        }).catch((err) => {
-            console.error(err);
-        });
+}
 
-
-
-
+module.exports.PinGroupFindByPinId = PinGroupFindByPinId;
+module.exports.PinGroupFindByUserId = PinGroupFindByUserId;
+module.exports.PinGroupAddUser = PinGroupAddUser;
+module.exports.PinGroupDeleteByPinId = PinGroupDeleteByPinId;
+module.exports.PinGroupDeleteByUserId = PinGroupDeleteByUserId;

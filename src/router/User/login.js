@@ -1,17 +1,17 @@
-var express = require('express');
-var router = express.Router();
-const { UserFindLogin } = require('./../../domain/DAO/users');
+const express = require('express');
+const router = express.Router();
+const userDAO = require('./../../domain/DAO/users');
 /* GET users listing. */
-router.post('/userFindLogin', function(req, res) {
-    if(UserFindLogin(req.body).id !== req.body.id ){
-        res.send('error');
+router.post('/user/login', function(req, res) {
+    if(userDAO.UserFindById(req.body).user_id != req.body.user_id ){
+       return res.send('error');
     }
-    else if(UserFind(req.body).password === req.body.password){
-        res.send(200);
+    else if(userDAO.UserFind(req.body).password != req.body.password){
+        return res.send("error");
     }
     else {
-        res.send('error');
+        res.send(200);
     }
-    console.log(req.body);
+    console.log('userFindLogin : ', req.body);
 });
 module.exports = router;

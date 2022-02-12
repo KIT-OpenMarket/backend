@@ -5,7 +5,7 @@ const chattingUserSchema = new Schema({
     user_id: {
         type: String,
         required: true,
-        ref : 'User',
+        ref : 'users',
     },
     chattingRoom_id: {
         type: ObjectId,
